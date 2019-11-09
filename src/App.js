@@ -1,40 +1,12 @@
 import React from 'react';
+import db from "./db/db.json"
+import Search from "./components/Search"
 
-const db = [
-  {
-    title: "",
-    phone: "",
-  },
-  {
-    title: "",
-    phone: "",
-  },
-  {
-    title: "",
-    phone: "",
-  }, {
-    title: "",
-    phone: "",
-  },
-  {
-    title: "",
-    phone: "",
-  }, {
-    title: "",
-    phone: "",
-  },
-  {
-    title: "",
-    phone: "",
-  }
-]
-
+console.log(db)
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        Kaktus
-      </header>
+      <Search db={db} resultsMaxLimit={5}/>
     </div>
   );
 }
