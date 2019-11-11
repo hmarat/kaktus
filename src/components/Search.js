@@ -51,7 +51,7 @@ export default class Search extends Component{
         return (
         <div>
             <input onChange={this.searchInputChangeHandler}/>
-            <NumbersList numbers={this.state.resultNumbers.slice(0, this.state.limit)}/>
+            <NumbersList numbers={this.state.resultNumbers.slice(0, this.state.limit)} searchText={this.state.searchText}/>
             {add && <button onClick={() => this.addLimit(add)}>{`Show ${add}`}</button>}
         </div>
         )
